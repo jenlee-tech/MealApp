@@ -7,6 +7,7 @@ const Header = () => {
     <React.Fragment>
       <header className={classes.header}>
         <h1>Meals App</h1>
+        <button>Cart</button>
       </header>
       <div>
         <img
