@@ -2,7 +2,9 @@ import classes from './Modal.module.css';
 import { Fragment } from 'react';
 import ReactDom from 'react-dom';
 
-const Backdrop - props => {
+//Createportal, creates a node that is outside the hierarchy of the DOM component.
+
+const Backdrop = props => {
     return <div className - {classes.backdrop}></div>
 }
 
