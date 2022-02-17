@@ -30,6 +30,8 @@ const DUMMY_MEALS = [
   },
 ];
 
+//nifty way to map out component wit styling that already contains li tags from MealItem component.
+
 const mealsList = DUMMY_MEALS.map((meal) => (
   <MealItem
     key={meal.id}
