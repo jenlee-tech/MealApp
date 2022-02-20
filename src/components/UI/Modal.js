@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 //Createportal, creates a node that is outside the hierarchy of the DOM component.
 
 const Backdrop = (props) => {
-  return <div className={classes.backdrop}></div>;
+  return <div className={classes.backdrop} onClick={props.onCloseCart}></div>;
 };
 
 const ModalOverlay = (props) => {
@@ -21,7 +21,10 @@ const portalElement = document.getElementById("overlays");
 const Modal = (props) => {
   return (
     <Fragment>
-      {ReactDOM.createPortal(<Backdrop />, portalElement)}
+      {ReactDOM.createPortal(
+        <Backdrop onCloseCart={props.onCloseCart} />,
+        portalElement
+      )}
       {ReactDOM.createPortal(
         <ModalOverlay>{props.children}</ModalOverlay>,
         portalElement
