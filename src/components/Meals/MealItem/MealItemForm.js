@@ -2,6 +2,8 @@ import { useRef, useState } from "react";
 import classes from "./MealItemForm.module.css";
 import Input from "../../UI/Input";
 
+//useRef is used to hold values without a rerendering of the page.
+
 const MealItemForm = (props) => {
   const [amountIsValid, setAmountIsValid] = useState(true);
   const amountInputRef = useRef();
