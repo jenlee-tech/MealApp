@@ -1,4 +1,4 @@
-import CartIcon from "../Cart/CartIcon";
+import CartIcon from "../Cart/CartIcon"; //the actual image of a little whittle cart (svg)
 import React from "react";
 import classes from "./HeaderCartButton.module.css";
 import { useContext } from "react";
@@ -10,14 +10,16 @@ const HeaderCartButton = (props) => {
   //using reduce method that uses the previous value and current value, check out MDN for fuller explanation on reduce method.
   const numberofCartItems = cartCtx.items.reduce((curNumber, item) => {
     return curNumber + item.amount;
-  }, 0);
+  }, 0); //the context helps interject state data into components without the use of pop drilling.
 
   return (
     <button className={classes.button} onClick={props.onShowCart}>
       <span className={classes.icon}>
         <CartIcon></CartIcon>
       </span>
+
       <span>Your Cart</span>
+
       <span className={classes.badge}>{numberofCartItems}</span>
     </button>
   );

@@ -1,6 +1,6 @@
 import classes from "./MealsAvailable.module.css";
 import React from "react";
-import Card from "../UI/Card";
+import Card from "../UI/Card"; //wrapper component to style the components within
 import MealItem from "../Meals/MealItem/MealItem";
 
 const DUMMY_MEALS = [

@@ -3,12 +3,13 @@ import MealItemForm from "./MealItemForm";
 import { useContext } from "react";
 import CartContext from "../../../store/cart-context";
 
+//check diagram.
 //useContext is an alternative tool other than props drilling
 
 const MealItem = (props) => {
   const cartCtx = useContext(CartContext); //the addItemToCartHandler is originally from the CartContext(CartProvider.js)
 
-  const price = `$${props.price.toFixed(2)}`;
+  const price = `$${props.price.toFixed(2)}`; //formats the price and then called in later in the jsx
 
   const addToCartHandler = (amount) => {
     cartCtx.addItem({
