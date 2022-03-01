@@ -5,6 +5,8 @@ import classes from "./Cart.module.css";
 import Modal from "../UI/Modal";
 import CartContext from "../../store/cart-context";
 
+//this is rendered in a modal.
+
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
 
@@ -38,7 +40,8 @@ const Cart = (props) => {
         <button className={classes["button--alt"]} onClick={props.onCloseCart}>
           Close
         </button>
-        {hasItems && <button className={classes.button}>Order</button>}
+        {hasItems && <button className={classes.button}>Order</button>}{" "}
+        {/*/short circuit evaluation*/}
       </div>
     </Modal>
   );

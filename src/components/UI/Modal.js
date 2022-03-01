@@ -2,6 +2,7 @@ import classes from "./Modal.module.css";
 import { Fragment } from "react";
 import ReactDOM from "react-dom";
 
+//This modal wraps around the Cart component to make the Cart a modal
 //Createportal, creates a node that is outside the hierarchy of the DOM component.
 
 const Backdrop = (props) => {
