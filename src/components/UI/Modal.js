@@ -22,13 +22,14 @@ const portalElement = document.getElementById("overlays");
 const Modal = (props) => {
   return (
     <Fragment>
+      {" "}
+      {/*so the components could be side by side*/}
       {/*this is the background (dark gray) when the cart is clicked on */}
       {ReactDOM.createPortal(
         <Backdrop onCloseCart={props.onCloseCart} />,
         portalElement
       )}
       {/*this is where the cart appears in */}
-
       {ReactDOM.createPortal(
         <ModalOverlay>{props.children}</ModalOverlay>,
         portalElement

@@ -14,12 +14,12 @@ const HeaderCartButton = (props) => {
 
   return (
     <button className={classes.button} onClick={props.onShowCart}>
+      {" "}
+      {/*pop driling instead of context*/}
       <span className={classes.icon}>
         <CartIcon></CartIcon>
       </span>
-
       <span>Your Cart</span>
-
       <span className={classes.badge}>{numberofCartItems}</span>
     </button>
   );
