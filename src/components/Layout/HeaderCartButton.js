@@ -5,7 +5,7 @@ import { useContext } from "react";
 import CartContext from "../../store/cart-context";
 
 const HeaderCartButton = (props) => {
-  const cartCtx = useContext(CartContext);
+  const cartCtx = useContext(CartContext); //the useContext hook, has to use the object(CartContext)
 
   //using reduce method that uses the previous value and current value, check out MDN for fuller explanation on reduce method.
   const numberofCartItems = cartCtx.items.reduce((curNumber, item) => {

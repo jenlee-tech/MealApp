@@ -2,7 +2,9 @@ import { useRef, useState } from "react";
 import classes from "./MealItemForm.module.css";
 import Input from "../../UI/Input";
 
-//useRef is used to hold values without a rerendering of the page.
+//detailed code just for one input field, which is the amount of a particular meal - LOL
+
+//useRef is used to hold values without a rerendering of the page (instead of two way binding)
 
 const MealItemForm = (props) => {
   const [amountIsValid, setAmountIsValid] = useState(true);
@@ -11,8 +13,9 @@ const MealItemForm = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
     const enteredAmount = amountInputRef.current.value;
-    const enteredAmountNumber = +enteredAmount;
-    //validation here
+    const enteredAmountNumber = +enteredAmount; //the plus sign will convert a string number to a numbe type
+
+    //validation here to see if input is valid, from lines 17 - 26
     if (
       enteredAmount.trim().length === 0 ||
       enteredAmountNumber < 1 ||
