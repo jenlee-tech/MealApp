@@ -12,8 +12,10 @@ const HeaderCartButton = (props) => {
     return curNumber + item.amount;
   }, 0); //the context helps interject state data into components without the use of pop drilling.
 
+  const btnClasses = `${classes.button} ${classes.bump}`;
+
   return (
-    <button className={classes.button} onClick={props.onShowCart}>
+    <button className={btnClasses} onClick={props.onShowCart}>
       {" "}
       {/*pop driling instead of context*/}
       <span className={classes.icon}>
